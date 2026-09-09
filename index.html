@@ -84,5 +84,19 @@
   </nav>
 
   <script src="assets/script.js"></script>
+
+  <!-- Handles invite/password links from Netlify Identity emails -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      netlifyIdentity.on('init', function (user) {
+        // If the URL contains an invite or recovery token, the widget
+        // auto-opens the "set password" screen on load.
+      });
+      netlifyIdentity.on('login', function () {
+        window.location.href = '/admin/';
+      });
+    }
+  </script>
 </body>
 </html>
