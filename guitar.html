@@ -17,9 +17,12 @@
 
   <main>
     <h1 class="page-title">Guitar</h1>
-    <p class="lede">Projects will show up here as cards, each linking out to its files on GitHub.</p>
-
-    <p class="coming-soon">Nothing posted yet — this is a placeholder we'll fill in together in a later step.</p>
+    <div id="post-list">
+      <p class="coming-soon">Loading...</p>
+    </div>
   </main>
+
+  <script src="assets/blog.js"></script>
+  <script>renderPosts('content/guitar.json');</script>
 </body>
 </html>

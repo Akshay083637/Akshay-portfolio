@@ -1,0 +1,49 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+collections:
+  - name: "crochet"
+    label: "Crochet Posts"
+    files:
+      - name: "posts"
+        label: "Crochet Posts List"
+        file: "content/crochet.json"
+        fields:
+          - { label: "Posts", name: "posts", widget: "list", fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Date", name: "date", widget: "datetime" },
+              { label: "Photo", name: "photo", widget: "image", required: false },
+              { label: "Content", name: "body", widget: "text" }
+            ]}
+
+  - name: "guitar"
+    label: "Guitar Posts"
+    files:
+      - name: "posts"
+        label: "Guitar Posts List"
+        file: "content/guitar.json"
+        fields:
+          - { label: "Posts", name: "posts", widget: "list", fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Date", name: "date", widget: "datetime" },
+              { label: "Photo", name: "photo", widget: "image", required: false },
+              { label: "Content", name: "body", widget: "text" }
+            ]}
+
+  - name: "biking"
+    label: "Biking Posts"
+    files:
+      - name: "posts"
+        label: "Biking Posts List"
+        file: "content/biking.json"
+        fields:
+          - { label: "Posts", name: "posts", widget: "list", fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Date", name: "date", widget: "datetime" },
+              { label: "Photo", name: "photo", widget: "image", required: false },
+              { label: "Content", name: "body", widget: "text" }
+            ]}
